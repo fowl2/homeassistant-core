@@ -12,6 +12,15 @@
   },
   // Port 5683 udp is used by Shelly integration
   "appPort": ["8123:8123", "5683:5683/udp"],
+  "portsAttributes": {
+    "8123": {
+      "label": "home-assistant"
+    },
+    "5683": {
+      "label": "integration-shelly"
+    }
+  },
+  "forwardPorts": [8123],
   "runArgs": [
     "-e",
     "GIT_EDITOR=code --wait",
